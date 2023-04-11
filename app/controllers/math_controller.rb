@@ -42,4 +42,18 @@ class MathController < ApplicationController
     render({ :template => "math_templates/multiply_form.html.erb"})
   end
 
+  def wizard_divide
+    @first = params.fetch("first_num").to_f
+
+    @second = params.fetch("second_num").to_f
+
+    @result = @first / @second
+
+    render({ :template => "math_templates/divide_results.html.erb" })
+  end
+
+  def muggle_divide
+    render({ :template => "math_templates/divide_form.html.erb"})
+  end
+
 end

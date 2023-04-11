@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   get("/wizard_multiply", { :controller => "math", :action => "wizard_multiply" })
 
   get("/multiply", { :controller => "math", :action => "muggle_multiply" })
+
+  get("/wizard_divide", { :controller => "math", :action => "wizard_divide" })
+
+  get("/divide", { :controller => "math", :action => "muggle_divide" })
 end
